@@ -1,7 +1,7 @@
 # Executive Summary:
 
 ### Problem: 
-Black women in the United States experience disproportionately high breast cancer mortality, yet the specific drivers of in-hospital death—particularly the role of structural inequities beyond clinical severity—remain underexamined.
+Black women in the United States experience disproportionately high breast cancer mortality, yet the specific drivers of in-hospital death, particularly the role of structural inequities beyond clinical severity, remain underexamined.
 
 ## Methodology:
 This study analyzes 5,933 hospitalizations from the 2021 National Inpatient Sample using a machine learning framework. Data Preparation Extraction of breast cancer hospitalizations using ICD-10 code C50. Cleaning and recoding of clinical and structural variables. Application of discharge weights to produce nationally representative estimates. Handling of categorical variables through encoding and normalization.
