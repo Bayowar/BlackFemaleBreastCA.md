@@ -1,9 +1,9 @@
-# Executive Summary:
+# Executive Summary
 
-### Problem: 
+### Problem
 Black women in the United States experience disproportionately high breast cancer mortality, yet the specific drivers of in-hospital death, particularly the role of structural inequities beyond clinical severity, remain underexamined.
 
-## Methodology:
+## Methodology
 This study analyzes 5,933 hospitalizations from the 2021 National Inpatient Sample using a machine learning framework. Data Preparation Extraction of breast cancer hospitalizations using ICD-10 code C50. Cleaning and recoding of clinical and structural variables. Application of discharge weights to produce nationally representative estimates. Handling of categorical variables through encoding and normalization.
 Exploratory Data Analysis Descriptive statistics of demographic, clinical, and structural variables. Comparative analysis across geographic regions and socioeconomic strata.
 Statistical & Machine Learning Models Six predictive models were trained and compared: Model Purpose Logistic Regression (L1/L2) Baseline statistical inference Elastic Net (Best Model) Handles multicollinearity and feature selection Random Forest Captures nonlinear relationships Gradient Boosting (GBM) Enhances predictive performance XGBoost Optimized ensemble learning Training/Validation Split: 70% / 30% Evaluation Metric: Area Under the ROC Curve (AUC) Best Performance: Elastic Net (AUC ≈ 0.69) Feature Importance: Assessed using permutation importance.
