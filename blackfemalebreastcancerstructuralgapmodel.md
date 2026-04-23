@@ -13,11 +13,11 @@ This study analyzes **5,934 hospitalizations** from the 2021 National Inpatient 
 - **Data Preparation:** Extraction of breast cancer hospitalizations using ICD-10 code C50. Cleaning and recoding of clinical and structural variables. Application of discharge weights to produce nationally representative estimates. Handling of categorical variables through encoding and normalization.
 - **Exploratory Data Analysis:** Descriptive statistics of demographic, clinical, and structural variables. Comparative analysis across geographic regions and socioeconomic strata.
 - **Statistical & Machine Learning Models:** Six predictive models were trained and compared:
-  - Logistic Regression (L1/L2) – Baseline statistical inference
-  - **Elastic Net (Best Model)** – Handles multicollinearity and feature selection (AUC ≈ 0.69)
-  - Random Forest – Captures nonlinear relationships
-  - Gradient Boosting (GBM) – Enhances predictive performance
-  - XGBoost – Optimized ensemble learning
+    - Logistic Regression (L1/L2) Baseline statistical model used for both inference and prediction. Achieved the highest cross-validated performance (CV AUC ≈ 0.71), indicating that relationships between predictors and mortality are largely linear and additive.
+    - Elastic Net Combines L1 and L2 regularization for feature selection and multicollinearity handling. Demonstrated reduced predictive performance (CV AUC ≈ 0.62), suggesting important predictors were over-shrunk.
+    - Random Forest Ensemble tree-based model capable of capturing nonlinear relationships and interactions (CV AUC ≈ 0.66).
+    - Gradient Boosting (GBM) Sequential ensemble method designed to improve predictive accuracy. Best-performing nonlinear model, but still below logistic regression (CV AUC ≈ 0.68).
+    - XGBoost Optimized gradient boosting algorithm tailored for imbalanced data. Performance comparable to GBM but did not outperform the linear model (CV AUC ≈ 0.67).
   
   Training/Validation Split: 70% / 30% | Evaluation Metric: Area Under the ROC Curve (AUC)<br>
   Feature Importance: Assessed using permutation importance.
